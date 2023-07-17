@@ -1,18 +1,16 @@
-# Salesforce DX Project: Next Steps
+# Test of LWC RefreshApi
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+codeLive: How To Synchronize Component Data in LWC Using the RefreshView API
 
-## How Do You Plan to Deploy Your Changes?
+This repo contains a super simple lwc "refreshMonitor" that uses the lwc refreshapi to register a refresh handler.
+"refreshMonitor" lwc is placed on Account record page.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+When handler fires the lwc console logs "refreshHandler".
+Idea was to test when a refreshHandler gets fired
+Observation
+1) when Account record detail gets updated -> refreshHandler fires
+2) when record in standard related list on Account record page gets updated (e.g. use Edit button on Opportunity related list) -> refreshHandler does not fire
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Question
+- is this working as expected?
+- is this a bug?
