@@ -7,6 +7,7 @@ This repo contains a super simple lwc "refreshMonitor" that uses the lwc refresh
 
 When handler fires the lwc console logs "refreshHandler".
 Idea was to test when a refreshHandler gets fired
+
 Observation
 1) when Account record detail gets updated -> refreshHandler fires
 2) when record in standard related list on Account record page gets updated (e.g. use Edit button on Opportunity related list) -> refreshHandler does not fire
