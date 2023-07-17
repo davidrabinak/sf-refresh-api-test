@@ -15,3 +15,11 @@ Observation
 Question
 - is this working as expected?
 - is this a bug?
+
+How to test..
+- push to scratch org
+- create Account record
+- create related Opportunity record
+- on Account record page
+1) edit any field on Account detail
+2) on Opportunity related list click Edit button on related Opportunity record, make change and save
